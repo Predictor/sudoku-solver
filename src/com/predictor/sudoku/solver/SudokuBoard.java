@@ -2,13 +2,24 @@ package com.predictor.sudoku.solver;
 
 public class SudokuBoard {
     private static final byte boxSize = 3;
-    private static final byte boardSize = boxSize * boxSize;
-    private static final byte clusterSize = (boardSize * 3) - (boxSize * 2) - 1;
-    public static final byte BOARD_ARRAY_SIZE = boardSize * boardSize;
+    public static final byte BOARD_SIZE = boxSize * boxSize;
+    private static final byte clusterSize = (BOARD_SIZE * 3) - (boxSize * 2) - 1;
+    public static final byte BOARD_ARRAY_SIZE = BOARD_SIZE * BOARD_SIZE;
     private byte[] board;
+    private boolean[] isPredefinedCell;
 
     public SudokuBoard() {
         board = new byte[BOARD_ARRAY_SIZE];
+        isPredefinedCell = new boolean[BOARD_ARRAY_SIZE];
+    }
+
+    public SudokuBoard(SudokuBoard sudokuBoard) {
+        board = new byte[BOARD_ARRAY_SIZE];
+        isPredefinedCell = new boolean[BOARD_ARRAY_SIZE];
+        for (int i = 0; i < BOARD_ARRAY_SIZE; i++) {
+            board[i] = sudokuBoard.board[i];
+            isPredefinedCell[i] = sudokuBoard.isPredefinedCell[i];
+        }
     }
 
     public SudokuBoard(byte[] boardArray) {
@@ -16,8 +27,10 @@ public class SudokuBoard {
             throw new IllegalArgumentException("boardArray");
         }
         board = new byte[BOARD_ARRAY_SIZE];
+        isPredefinedCell = new boolean[BOARD_ARRAY_SIZE];
         for (int i = 0; i < BOARD_ARRAY_SIZE; i++) {
             board[i] = boardArray[i];
+            isPredefinedCell[i] = board[i] != 0;
         }
     }
 
@@ -29,6 +42,16 @@ public class SudokuBoard {
     public byte GetCell(int row, int column) {
         validateIndex(row, column);
         return getCell(row, column);
+    }
+
+    /**
+     * @param row    - row number starting from 0
+     * @param column - column number starting from 0
+     * @return true if cell was defined in initial board
+     */
+    public boolean IsPredefinedCell(int row, int column) {
+        validateIndex(row, column);
+        return isPredefinedCell[getCellIndex(row, column)];
     }
 
     /**
@@ -90,11 +113,11 @@ public class SudokuBoard {
     private int[] getClusterIndexes(int row, int column) {
         int[] indexes = new int[clusterSize];
         int k = 0;
-        for (byte i = 0; i < boardSize; i++) {
+        for (byte i = 0; i < BOARD_SIZE; i++) {
             if (row == i) continue;
             indexes[k++] = getCellIndex(i, column);
         }
-        for (byte i = 0; i < boardSize; i++) {
+        for (byte i = 0; i < BOARD_SIZE; i++) {
             if (column == i) continue;
             indexes[k++] = getCellIndex(row, i);
         }
@@ -115,18 +138,18 @@ public class SudokuBoard {
     }
 
     private int getCellIndex(int row, int column) {
-        return row * boardSize + column;
+        return row * BOARD_SIZE + column;
     }
 
     private void validateValue(int value) {
-        if (value < 0 || value > boardSize) {
-            throw new IllegalArgumentException(String.format("value must be >=0 and <=%d", boardSize));
+        if (value < 0 || value > BOARD_SIZE) {
+            throw new IllegalArgumentException(String.format("value must be >=0 and <=%d", BOARD_SIZE));
         }
     }
 
     private void validateIndex(int row, int column) {
-        if (row < 0 || row >= boardSize || column < 0 || column >= boardSize) {
-            throw new IllegalArgumentException(String.format("row/column number must be >=0 and <%d", boardSize));
+        if (row < 0 || row >= BOARD_SIZE || column < 0 || column >= BOARD_SIZE) {
+            throw new IllegalArgumentException(String.format("row/column number must be >=0 and <%d", BOARD_SIZE));
         }
     }
 }
