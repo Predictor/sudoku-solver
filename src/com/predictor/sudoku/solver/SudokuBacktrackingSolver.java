@@ -1,17 +1,29 @@
 package com.predictor.sudoku.solver;
 
-public class SudokuBacktracking extends BacktrackingBase {
+public class SudokuBacktrackingSolver extends BacktrackingBase implements ISudokuSolver {
 
     private SudokuBoard sudokuBoard;
     private int row;
     private int column;
 
-    public SudokuBacktracking(SudokuBoard sudokuBoard) {
+    public SudokuBacktrackingSolver(SudokuBoard sudokuBoard) {
         this.sudokuBoard = new SudokuBoard(sudokuBoard);
         row = 0;
         column = 0;
     }
 
+    /**
+     * @return true if solution is found, false otherwise
+     */
+    @Override
+    public boolean Solve(){
+        return this.TryFindSolution();
+    }
+
+    /**
+     * @return solution if it was found, undefined result otherwise
+     */
+    @Override
     public SudokuBoard GetResult() {
         return new SudokuBoard(sudokuBoard);
     }

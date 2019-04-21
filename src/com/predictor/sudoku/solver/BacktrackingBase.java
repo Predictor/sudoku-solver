@@ -1,7 +1,8 @@
 package com.predictor.sudoku.solver;
 
 public abstract class BacktrackingBase {
-    public boolean TryFindSolution() {
+
+    protected boolean TryFindSolution() {
         while (true) {
             if (TryExecuteStep()) {
                 if (IsProblemSolved()) {
