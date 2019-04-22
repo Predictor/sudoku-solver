@@ -11,7 +11,7 @@ public class ArraySudokuBoardProvider implements ISudokuBoardProvider {
     }
 
     @Override
-    public SudokuBoard Get(){
+    public SudokuBoard GetBoard(){
         return new SudokuBoard(array);
     }
 }

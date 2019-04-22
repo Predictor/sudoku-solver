@@ -10,9 +10,9 @@ public class FileSudokuBoardProvider implements ISudokuBoardProvider{
     }
 
     @Override
-    public SudokuBoard Get() {
+    public SudokuBoard GetBoard() {
         var array = reader.Read(path, SudokuBoard.BOARD_ARRAY_SIZE);
         var arraySudokuBoardProvider = new ArraySudokuBoardProvider(array);
-        return arraySudokuBoardProvider.Get();
+        return arraySudokuBoardProvider.GetBoard();
     }
 }

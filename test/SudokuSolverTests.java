@@ -27,9 +27,9 @@ public class SudokuSolverTests {
     public void ApplyValidSolution() {
         var reader = new NumberArrayFileReader();
         URL url = getClass().getResource("resources/sample1.txt");
-        var board = new FileSudokuBoardProvider(reader, url.getFile()).Get();
+        var board = new FileSudokuBoardProvider(reader, url.getFile()).GetBoard();
         url = getClass().getResource("resources/sample1-solved.txt");
-        var solvedBoard = new FileSudokuBoardProvider(reader, url.getFile()).Get();
+        var solvedBoard = new FileSudokuBoardProvider(reader, url.getFile()).GetBoard();
         for (byte i = 0; i < 9; i++) {
             for (byte j = 0; j < 9; j++) {
                 Assert.assertTrue(String.format("TrySetCell(%d, %d, %d) expected to return true", i, j, solvedBoard.GetCell(i, j)), board.TrySetCell(i, j, solvedBoard.GetCell(i, j)));
@@ -41,7 +41,7 @@ public class SudokuSolverTests {
     public void TrySetIncorrectCellValue() {
         var reader = new NumberArrayFileReader();
         var url = getClass().getResource("resources/sample1-solved.txt");
-        var solvedBoard = new FileSudokuBoardProvider(reader, url.getFile()).Get();
+        var solvedBoard = new FileSudokuBoardProvider(reader, url.getFile()).GetBoard();
         for (byte i = 0; i < 9; i++) {
             for (byte j = 0; j < 9; j++) {
                 var oldValue = solvedBoard.GetCell(i, j);
@@ -113,7 +113,7 @@ public class SudokuSolverTests {
         var url = getClass().getResource(fileName);
         var reader = new NumberArrayFileReader();
         var provider = new FileSudokuBoardProvider(reader, url.getFile());
-        var boardToSolve = provider.Get();
+        var boardToSolve = provider.GetBoard();
         var solver = new SudokuBacktrackingSolver(boardToSolve);
         Assert.assertTrue("Failed to find solution.", solver.Solve());
         var solvedBoard = solver.GetResult();
@@ -129,7 +129,7 @@ public class SudokuSolverTests {
         var url = getClass().getResource(fileName);
         var reader = new NumberArrayFileReader();
         var provider = new FileSudokuBoardProvider(reader, url.getFile());
-        var boardToSolve = provider.Get();
+        var boardToSolve = provider.GetBoard();
         var solver = new SudokuBacktrackingSolver(boardToSolve);
         Assert.assertFalse("Must have failed.", solver.Solve());
     }

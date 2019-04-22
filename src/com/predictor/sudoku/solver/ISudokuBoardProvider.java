@@ -1,5 +1,5 @@
 package com.predictor.sudoku.solver;
 
 public interface ISudokuBoardProvider {
-    SudokuBoard Get();
+    SudokuBoard GetBoard();
 }
