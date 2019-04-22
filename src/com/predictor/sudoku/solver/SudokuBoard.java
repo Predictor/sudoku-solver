@@ -78,20 +78,33 @@ public class SudokuBoard {
     }
 
     /**
-     * @ Sets the value to a cell at [row][column] only when the value satisfies Sudoku rules
      * @param row    - row number starting from 0
      * @param column - column number starting from 0
      * @param value  - cell value (0 means empty)
      * @return true if the value satisfies Sudoku rules, false otherwise
+     * @ Sets the value to a cell at [row][column] only when the value satisfies Sudoku rules
      */
     public boolean TrySetCell(int row, int column, byte value) {
         validateIndex(row, column);
         validateValue(value);
-        if(canSetCell(row, column, value)){
+        if (canSetCell(row, column, value)) {
             board[getCellIndex(row, column)] = value;
             return true;
         }
         return false;
+    }
+
+    public String toString() {
+        var sb = new StringBuilder();
+        for (int i = 0; i < SudokuBoard.BOARD_SIZE; i++) {
+            if (i > 0) {
+                sb.append(System.lineSeparator());
+            }
+            for (int j = 0; j < SudokuBoard.BOARD_SIZE; j++) {
+                sb.append(getCell(i, j));
+            }
+        }
+        return sb.toString();
     }
 
     private boolean canSetCell(int row, int column, byte value) {

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="607f244d-df49-47b2-91e7-803930a74df5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverArgs.java" afterDir="false" />
+    <list default="true" id="6e850bbe-ecb4-47c2-b014-83b82202b6d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/ArraySudokuBoardProviderTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/NumberArrayFileReaderTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/SudokuBoardTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Sudoku solver - architecture review.docx" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Sudoku solver - architecture review.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/ArraySudokuBoardProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/ArraySudokuBoardProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/FileSudokuBoardProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/FileSudokuBoardProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/ISudokuBoardProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/ISudokuBoardProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/NumberArrayFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/NumberArrayFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/SudokuSolverTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SudokuSolverTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,161 +24,40 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="293" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/NumberArrayFileReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverArgs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBoard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
-              <folding>
-                <element signature="e#4652#4653#0" expanded="true" />
-                <element signature="e#4753#4754#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/BacktrackingBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBacktrackingSolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-              <folding>
-                <element signature="e#381#382#0" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#722#723#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/SudokuSolverTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2325">
-              <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
+            <state relative-caret-position="-825">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2465#2466#0" expanded="true" />
-                <element signature="e#2513#2514#0" expanded="true" />
-                <element signature="e#2597#2598#0" expanded="true" />
-                <element signature="e#2668#2669#0" expanded="true" />
-                <element signature="e#2724#2725#0" expanded="true" />
-                <element signature="e#2795#2796#0" expanded="true" />
-                <element signature="e#2851#2852#0" expanded="true" />
-                <element signature="e#2922#2923#0" expanded="true" />
-                <element signature="e#2886#2887#0" expanded="true" />
-                <element signature="e#2957#2958#0" expanded="true" />
-                <element signature="e#3013#3014#0" expanded="true" />
-                <element signature="e#3084#3085#0" expanded="true" />
-                <element signature="e#3140#3141#0" expanded="true" />
-                <element signature="e#3211#3212#0" expanded="true" />
-                <element signature="e#3323#3324#0" expanded="true" />
-                <element signature="e#3402#3403#0" expanded="true" />
-                <element signature="e#3458#3459#0" expanded="true" />
-                <element signature="e#3537#3538#0" expanded="true" />
-                <element signature="e#3593#3594#0" expanded="true" />
-                <element signature="e#3672#3673#0" expanded="true" />
-                <element signature="e#3740#3741#0" expanded="true" />
-                <element signature="e#3819#3820#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/FileSudokuBoardProvider.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/ArraySudokuBoardProviderTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="75">
+              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>byte</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/sudoku-solver.iml" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/ArrayFileReader.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/NumberArrayFileReader.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/ArraySudokuBoardProvider.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBoardCopyProvider.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBoard.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBacktracking.java" />
-        <option value="$PROJECT_DIR$/test/SudokuBoardTests.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBacktrackingSolver.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/BacktrackingBase.java" />
-        <option value="$PROJECT_DIR$/test/SudokuSolverTests.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverArgsParser.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/Solver.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverArgs.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/FileSudokuBoardProvider.java" />
-        <option value="$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverApp.java" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="580" />
@@ -184,8 +70,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,18 +82,7 @@
             <path>
               <item name="sudoku-solver" type="b2602c69:ProjectViewProjectNode" />
               <item name="sudoku-solver" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sudoku-solver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sudoku-solver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sudoku-solver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sudoku-solver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="solver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sudoku-solver" type="b2602c69:ProjectViewProjectNode" />
@@ -232,18 +107,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="extract.method.default.visibility" value="private" />
-  </component>
-  <component name="RecentsManager">
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.predictor.sudoku.solver" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.predictor.sudoku.solver" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\git\sudoku-solver\test" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -257,106 +121,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SudokuSolverApp">
-    <configuration name="SudokuSolverApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.predictor.sudoku.solver.SudokuSolverApp" />
-      <module name="sudoku-solver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.predictor.sudoku.solver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuSolverTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="All in sudoku-solver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sudoku-solver" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuSolverTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuSolverTests.TestBackTracking_Sample3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sudoku-solver" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuSolverTests" />
-      <option name="METHOD_NAME" value="TestBackTracking_Sample3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuSolverTests.TestBackTracking_Sample4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sudoku-solver" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuSolverTests" />
-      <option name="METHOD_NAME" value="TestBackTracking_Sample4" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuSolverTests.TestBackTracking_Sample5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sudoku-solver" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuSolverTests" />
-      <option name="METHOD_NAME" value="TestBackTracking_Sample5" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="JUnit.SudokuSolverTests" />
-      <item itemvalue="JUnit.SudokuSolverTests.TestBackTracking_Sample3" />
-      <item itemvalue="JUnit.SudokuSolverTests.TestBackTracking_Sample4" />
-      <item itemvalue="JUnit.SudokuSolverTests.TestBackTracking_Sample5" />
-      <item itemvalue="Application.SudokuSolverApp" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SudokuSolverApp" />
-        <item itemvalue="JUnit.SudokuSolverTests" />
-        <item itemvalue="JUnit.SudokuSolverTests.TestBackTracking_Sample5" />
-        <item itemvalue="JUnit.SudokuSolverTests.TestBackTracking_Sample4" />
-        <item itemvalue="JUnit.SudokuSolverTests.TestBackTracking_Sample3" />
+        <item itemvalue="JUnit.All in sudoku-solver" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="SudokuBoardTests_TestBackTracking_Sample3 - 2019.04.21 at 01h 31m 21s.xml">
-      <configuration name="SudokuBoardTests.TestBackTracking_Sample3" configurationId="JUnit" />
+    <history-entry file="All_in_sudoku-solver - 2019.04.23 at 00h 06m 19s.xml">
+      <configuration name="All in sudoku-solver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SudokuBoardTests_TestBackTracking_Sample2 - 2019.04.21 at 01h 32m 55s.xml">
-      <configuration name="SudokuBoardTests.TestBackTracking_Sample2" configurationId="JUnit" />
+    <history-entry file="All_in_sudoku-solver - 2019.04.23 at 00h 07m 28s.xml">
+      <configuration name="All in sudoku-solver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SudokuBoardTests_TestBackTracking_Sample2 - 2019.04.21 at 01h 33m 06s.xml">
-      <configuration name="SudokuBoardTests.TestBackTracking_Sample2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuBoardTests_TestBackTracking_Sample3 - 2019.04.21 at 01h 33m 36s.xml">
-      <configuration name="SudokuBoardTests.TestBackTracking_Sample3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuBoardTests - 2019.04.21 at 01h 33m 49s.xml">
-      <configuration name="SudokuBoardTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuBoardTests_TestBackTracking_Sample4 - 2019.04.21 at 19h 06m 51s.xml">
-      <configuration name="SudokuBoardTests.TestBackTracking_Sample4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuBoardTests - 2019.04.21 at 19h 11m 18s.xml">
-      <configuration name="SudokuBoardTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuSolverTests_TestBackTracking_Sample5 - 2019.04.21 at 21h 18m 30s.xml">
-      <configuration name="SudokuSolverTests.TestBackTracking_Sample5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuSolverTests - 2019.04.21 at 21h 20m 04s.xml">
-      <configuration name="SudokuSolverTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuSolverTests - 2019.04.21 at 21h 30m 17s.xml">
-      <configuration name="SudokuSolverTests" configurationId="JUnit" />
+    <history-entry file="All_in_sudoku-solver - 2019.04.23 at 00h 17m 38s.xml">
+      <configuration name="All in sudoku-solver" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -365,192 +153,62 @@
     <layout>
       <window_info id="Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.32969603" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969603" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4925955" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969603" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3298887" />
+      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.3298887" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="column" language="JAVA" />
-        <watch expression="row" language="JAVA" />
-        <watch expression="sudokuBoard.getCellIndex(row, column)" language="JAVA" />
-        <watch expression="sudokuBoard.GetCell(row, column)" language="JAVA" />
-      </configuration>
-    </watches-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sudoku_solver$SudokuBoardTests.ic" NAME="SudokuBoardTests Coverage Results" MODIFIED="1555787849702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="breakpointCondition">
-      <expression>
-        <expression-string>row == 4 &amp;&amp; column == 4</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="watch">
-      <expression>
-        <expression-string>sudokuBoard.GetCell(row, column)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>sudokuBoard.getCellIndex(row, column)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>getCell(1, 1)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>getCellIndex(row, column)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>getClass().getResource(&quot;resources/sample1.txt&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
+    <SUITE FILE_PATH="coverage/sudoku_solver$All_in_sudoku_solver.ic" NAME="All in sudoku-solver Coverage Results" MODIFIED="1555972501129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sudoku-solver.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/ArraySudokuBoardProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBoardCopyProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/BacktrackingBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#4652#4653#0" expanded="true" />
-            <element signature="e#4753#4754#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/SudokuSolverTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2465#2466#0" expanded="true" />
-            <element signature="e#2513#2514#0" expanded="true" />
-            <element signature="e#2597#2598#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2724#2725#0" expanded="true" />
-            <element signature="e#2795#2796#0" expanded="true" />
-            <element signature="e#2851#2852#0" expanded="true" />
-            <element signature="e#2922#2923#0" expanded="true" />
-            <element signature="e#2886#2887#0" expanded="true" />
-            <element signature="e#2957#2958#0" expanded="true" />
-            <element signature="e#3013#3014#0" expanded="true" />
-            <element signature="e#3084#3085#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
-            <element signature="e#3211#3212#0" expanded="true" />
-            <element signature="e#3323#3324#0" expanded="true" />
-            <element signature="e#3402#3403#0" expanded="true" />
-            <element signature="e#3458#3459#0" expanded="true" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3593#3594#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3740#3741#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverArgs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/NumberArrayFileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="-825">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/FileSudokuBoardProvider.java">
+    <entry file="file://$PROJECT_DIR$/test/ArraySudokuBoardProviderTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="75">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuBacktrackingSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/predictor/sudoku/solver/SudokuSolverApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

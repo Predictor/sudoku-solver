@@ -1,5 +1,8 @@
 package com.predictor.sudoku.solver;
 
+/**
+ * Creates a SudokuBoard instance from byte array
+ */
 public class ArraySudokuBoardProvider implements ISudokuBoardProvider {
     private byte[] array;
 

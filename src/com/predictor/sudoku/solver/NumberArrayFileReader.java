@@ -36,7 +36,7 @@ public class NumberArrayFileReader implements IArrayFileReader {
         int c;
         while (true) {
             try {
-                if (!((c = reader.read()) != -1)) break;
+                if ((c = reader.read()) == -1) break;
             } catch (IOException e) {
                 throw new UnsupportedOperationException(String.format("Can not read file %s", path), e);
             }
